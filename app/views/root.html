@@ -3,7 +3,7 @@
     <h1>Tap Room</h1>
   </div>
   <div class="row">
-    <new-speg></new-speg>
+    <new-speg (sendNewObject)="addKeg($event)">Loading...</new-speg>
     <speg-beer [kegs]="masterKegList" (clickSender)="done($event)">Loading...</speg-beer>
   </div>
 </div>

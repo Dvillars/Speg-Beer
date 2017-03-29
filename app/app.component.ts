@@ -15,4 +15,8 @@ export class AppComponent{
     kegToDeselect.currentSelect = false;
   }
 
+  addKeg(keg) {
+    this.masterKegList.push(keg);
+  }
+
 }

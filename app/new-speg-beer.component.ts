@@ -8,4 +8,9 @@ import{ Keg } from './objects/keg';
 
 export class NewSpegComponent {
   @Output() sendNewObject = new EventEmitter();
+
+  submitForm(name, brand, price, spegContent) {
+    var newSpegBeer: Keg = new Keg(name, brand, price, spegContent);
+    this.sendNewObject.emit(newSpegBeer);
+  }
 }
