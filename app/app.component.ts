@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Keg } from './objects/keg';
 import { KEGS } from './models/mock-kegs';
-import { UpdateComponent } from './kegupdate.component';
+import { UpdateComponent } from './keg-update.component';
 
 @Component({
   selector: 'app-root',
