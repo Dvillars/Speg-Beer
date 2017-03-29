@@ -25,7 +25,7 @@ addSale(price: number) {
   this.otherClickSender.emit(price);
 }
 
-selectKeg(keg) {
+selectKeg(keg: Keg) {
   this.kegs.forEach(function(keg) {
     keg.currentSelect = false;
   });
@@ -34,7 +34,7 @@ selectKeg(keg) {
 }
 
 
-checkStatus(keg) {
+checkStatus(keg: Keg) {
   var status1: string = "";
   var status2: string = "";
   var status3: string = "";
