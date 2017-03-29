@@ -9,7 +9,12 @@ import { UpdateComponent } from './keg-update.component';
 })
 
 export class AppComponent{
+  selectedKeg = null;
   kegs: Keg[] = KEGS;
+
+  selectKeg(keg) {
+    this.selectedKeg = keg;
+  }
 
   checkStatus(pints) {
     if(pints <= 10) {
