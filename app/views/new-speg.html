@@ -3,19 +3,19 @@
     <form>
       <div class="form-group">
         <label for="name">Name: </label>
-        <input type="text" #newName>
+        <input class="form-control" type="text" #newName>
       </div>
       <div class="form-group">
         <label for="brand">Brand: </label>
-        <input type="text" #newBrand>
+        <input class="form-control" type="text" #newBrand>
       </div>
       <div class="form-group">
         <label for="price">Price: </label>
-        <input type="text" #newPrice>
+        <input class="form-control" type="text" #newPrice>
       </div>
       <div class="form-group">
         <label for="speghet">Speghetti Content: </label>
-        <input type="text" #newSpegContent>
+        <input class="form-control" type="text" #newSpegContent>
       </div>
       <button class="btn btn-warning" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newSpegContent.value); showNewForm = !showNewForm">Add New Spegbeer</button>
     </form>
