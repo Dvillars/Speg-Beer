@@ -13,7 +13,20 @@ export class AppComponent{
   kegs: Keg[] = KEGS;
 
   selectKeg(keg) {
+    this.kegs.forEach(function(keg) {
+      keg.currentSelect = false;
+    });
     this.selectedKeg = keg;
+    this.selectedKeg.currentSelect = true;
+  }
+
+  checkSelected(keg) {
+    if(keg.currentSelect) {
+      return "selected";
+    }
+    else {
+      return "unselected";
+    }
   }
 
   checkStatus(pints) {

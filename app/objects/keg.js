@@ -6,6 +6,7 @@ var Keg = (function () {
         this.price = price;
         this.spegContent = spegContent;
         this.pints = 12;
+        this.currentSelect = false;
     }
     ;
     return Keg;
