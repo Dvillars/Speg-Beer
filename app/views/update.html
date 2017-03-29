@@ -1,8 +1,8 @@
-<div class="">
-  <button class='btn btn-warning' (click)="servePint(keg)">Serve Pint</button>
-  <button class='btn btn-warning' (click)="serveGrowler(keg)">Serve Growler</button>
-  <button class='btn btn-warning' (click)="serveLargeGrowler(keg)">Serve Large Growler</button>
-  <button class='btn btn-warning' (click)="updateForm = !updateForm">{{updateForm ? 'Save' : 'Edit'}}</button>
+<div class="update-div">
+  <button class='btn btn-warning' (click)="servePint(keg)">Serve Pint</button><br>
+  <button class='btn btn-warning' (click)="serveGrowler(keg)">Serve Growler</button><br>
+  <button class='btn btn-warning' (click)="serveLargeGrowler(keg)">Serve Large Growler</button><br>
+  <button class='btn btn-warning' (click)="updateForm = !updateForm">{{updateForm ? 'Save' : 'Edit'}}</button><br>
   <div *ngIf="updateForm">
     <input [(ngModel)]='keg.name' type='text' placeholder='Brand:'>
     <input [(ngModel)]='keg.price' type='text' placeholder='Price:'>

@@ -33,30 +33,34 @@ selectKeg(keg) {
   this.selectedKeg.currentSelect = true;
 }
 
-checkSelected(keg) {
+
+checkStatus(keg) {
+  var status1: string = "";
+  var status2: string = "";
+  var status3: string = "";
   if(keg.currentSelect) {
-    return "selected";
+    status1 = "selected";
   }
   else {
-    return "unselected";
+    status1 = "unselected";
   }
+
+  if(keg.pints <= 10) {
+    status2 = "low-content";
+  }
+  else {
+    status2 = "";
+  }
+
+  if(keg.spegContent > 14) {
+    status3 = 'high-speg';
+  }
+  else {
+    status3 = 'normal-speg';
+  }
+
+  return status1 + " "+ status2 + " " + status3;
 }
 
-checkStatus(pints) {
-  if(pints <= 10) {
-    return "bg-warning";
-  }
-  else {
-    return "bg-default";
-  }
-}
 
-checkSpegContent(content) {
-  if(content > 14) {
-    return 'high-speg';
-  }
-  else {
-    return 'normal-speg';
-  }
-}
 }

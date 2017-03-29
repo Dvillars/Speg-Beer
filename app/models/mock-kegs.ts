@@ -1,15 +1,15 @@
 import { Keg } from './../objects/keg';
 
 export var KEGS: Keg[] = [
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 150),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 12),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 11),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 10),
-  new Keg("Speghetti Beer", "Spoodle", 15, 9),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 8),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 7),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 6),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 5),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 4),
-  new Keg("Speghetti Beer", "Speghet Brewery", 15, 3)
+  new Keg("Extra Speg", "Speghet Brewery", 7, 150),
+  new Keg("Speghetti Beer Lite", "Speghet Brewery", 5, 4),
+  new Keg("Super Dry, Speghet", "Speghet Brewery", 6, 11),
+  new Keg("Saucy Boss", "Speghet Brewery", 8, 10),
+  new Keg("Noodle Toot", "Spoodle BrewCrew", 5, 9),
+  new Keg("Shoop Doop, Speggy Speggy", "Speg City", 5, 8),
+  new Keg("Speggy Speg", "Speg City", 5, 7),
+  new Keg("Speg: Black Ladle", "Speg City", 8, 6),
+  new Keg("Red Speg: Normal", "Speghettizer", 6, 5),
+  new Keg("Plato-Speghettius", "Speghettizer", 7, 4),
+  new Keg("Spoog", "Speghettizer", 5, 3)
 ];

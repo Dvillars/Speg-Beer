@@ -1,19 +1,62 @@
-.high-speg {
-  font-weight: 600;
-}
+$main: #8eb9ff;
+$high-speg: #f99dc0;
+$low-speg: #241a44;
+$selected: #2591f7;
+$nav-bar-background: #cecece;
+$low-content: #bc84b0;
 
-.selected {
-  background-color: green;
+
+body {
+  margin-bottom: 10%;
+}
+.title-box {
+  text-align: right;
+  position: fixed;
+  padding-right: 5%;
+  top: 0px;
+  width: 100%;
+  background-color: $nav-bar-background;
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
+  }
 }
 
 .edit-speg-div {
+  text-align: right;
   position: fixed;
   right: 0px;
-  top: 10%;
+  top: 15%;
 }
 
 .new-speg {
   position: fixed;
   bottom: 0px;
   right: 0px;
+}
+
+.all-kegs {
+  margin: 3% 0 0 3%;
+  div {
+    padding: 2% 2% 2% 5%;
+    background-color: $main;
+  }
+  .selected {
+    position: relative;
+    left: 5%;
+  }
+
+  .high-speg {
+    border: 5px solid $high-speg;
+  }
+
+  .normal-speg {
+    border: 5px solid $low-speg;
+  }
+
+  .low-content {
+    background-color: $low-content;
+  }
 }
