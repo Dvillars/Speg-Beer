@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Keg } from './objects/keg';
 import { UpdateComponent } from './keg-update.component';
 
@@ -11,7 +11,13 @@ import { UpdateComponent } from './keg-update.component';
 
 export class SpegComponent {
 @Input() kegs: Keg[];
+@Output() clickSender = new EventEmitter();
 selectedKeg = null;
+
+done(kegToDeselect: Keg) {
+  this.selectedKeg = null;
+  this.clickSender.emit(kegToDeselect);
+}
 
 selectKeg(keg) {
   this.kegs.forEach(function(keg) {
@@ -37,11 +43,6 @@ checkStatus(pints) {
   else {
     return "bg-default";
   }
-}
-
-done() {
-  this.selectedKeg.currentSelect = false;
-  this.selectedKeg = null;
 }
 
 checkSpegContent(content) {

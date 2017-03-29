@@ -9,5 +9,10 @@ import { KEGS } from './models/mock-kegs';
 })
 
 export class AppComponent{
-  kegs: Keg[] = KEGS;
+  masterKegList: Keg[] = KEGS;
+
+  done(kegToDeselect) {
+    kegToDeselect.currentSelect = false;
+  }
+
 }
