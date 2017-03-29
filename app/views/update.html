@@ -4,8 +4,8 @@
   <button class='btn btn-warning' (click)="serveLargeGrowler(keg)">Serve Large Growler</button><br>
   <button class='btn btn-warning' (click)="updateForm = !updateForm">{{updateForm ? 'Save' : 'Edit'}}</button><br>
   <div *ngIf="updateForm">
-    <input [(ngModel)]='keg.name' type='text' placeholder='Brand:'>
-    <input [(ngModel)]='keg.price' type='text' placeholder='Price:'>
-    <input [(ngModel)]='keg.spegContent' type='number' placeholder='Speghet:'>
+    <input class="form-control" [(ngModel)]='keg.name' type='text' placeholder='Brand:'>
+    <input class="form-control" [(ngModel)]='keg.price' type='text' placeholder='Price:'>
+    <input class="form-control" [(ngModel)]='keg.spegContent' type='number' placeholder='Speghet:'>
   </div>
 </div>

@@ -6,16 +6,18 @@ $nav-bar-background: #cecece;
 $low-content: #bc84b0;
 
 
-body {
-  margin-bottom: 10%;
+.body {
+  margin: 10% 0 10% 0;
 }
 .title-box {
+  opacity: 0.8;
   text-align: right;
   position: fixed;
-  padding-right: 5%;
+  padding: 0 5% 1% 0;
   top: 0px;
   width: 100%;
   background-color: $nav-bar-background;
+  border-bottom: 1px solid black;
   h1 {
     font-size: 25px;
   }
@@ -40,6 +42,7 @@ body {
 .all-kegs {
   margin: 3% 0 0 3%;
   div {
+    border-radius: 10px;
     padding: 2% 2% 2% 5%;
     background-color: $main;
   }
