@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Keg } from './objects/keg';
+import { KEGS } from './models/mock-kegs';
 
 
 @Component({
@@ -7,5 +9,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent{
-
+  kegs: Keg[] = KEGS;
 }

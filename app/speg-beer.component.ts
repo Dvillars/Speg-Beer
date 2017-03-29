@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Keg } from './objects/keg';
-import { KEGS } from './models/mock-kegs';
 import { UpdateComponent } from './keg-update.component';
 
 
@@ -11,8 +10,8 @@ import { UpdateComponent } from './keg-update.component';
 
 
 export class SpegComponent {
+@Input() kegs: Keg[];
 selectedKeg = null;
-kegs: Keg[] = KEGS;
 
 selectKeg(keg) {
   this.kegs.forEach(function(keg) {
