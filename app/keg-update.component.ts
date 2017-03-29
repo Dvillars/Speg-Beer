@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Keg } from './objects/keg';
 
 @Component ({
@@ -8,34 +8,40 @@ import { Keg } from './objects/keg';
 
 export class UpdateComponent{
   @Input() keg: Keg;
-  servePint(keg) {
-    if(keg.pints === "You are out of this") {
+  @Output() clickSender = new EventEmitter();
+
+  done(keg: Keg) {
+    this.clickSender.emit(keg);
+  }
+
+  servePint(keg: Keg) {
+    if(keg.pints === 0) {
       alert("You cannot sell pints you are out of!");
     } else {
       keg.pints-= 1;
       if(keg.pints === 0)
       {
-        keg.pints = "You are out of this";
+        this.done(keg);
+        alert(`You are now out of ${keg.name}`);
       }
     }
   }
 
   serveGrowler(keg) {
-    if(keg.pints === "You are out of this") {
-      alert("You cannot sell pints you are out of!");
-    } else if(keg.pints < 2){
+    if(keg.pints < 2){
       alert("You do no have enough for a small growler");
     } else {
       keg.pints-= 2;
       if(keg.pints === 0)
       {
-        keg.pints = "You are out of this";
+        this.done(keg);
+        alert(`You are now out of ${keg.name}`)
       }
     }
   }
 
   serveLargeGrowler(keg) {
-    if(keg.pints === "You are out of this") {
+    if(keg.pints === 0) {
       alert("You cannot sell pints you are out of!");
     } else if(keg.pints < 4){
       alert("You do no have enough for a small growler");
@@ -43,7 +49,8 @@ export class UpdateComponent{
       keg.pints-= 4;
       if(keg.pints === 0)
       {
-        keg.pints = "You are out of this";
+        this.done(keg);
+        alert(`You are now out of ${keg.name}`)
       }
     }
   }

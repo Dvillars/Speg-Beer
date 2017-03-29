@@ -5,7 +5,7 @@ exports.KEGS = [
     new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 12),
     new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 11),
     new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 10),
-    new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 9),
+    new keg_1.Keg("Speghetti Beer", "Spoodle", "$15", 9),
     new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 8),
     new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 7),
     new keg_1.Keg("Speghetti Beer", "Speghet Brewery", "$15", 6),
