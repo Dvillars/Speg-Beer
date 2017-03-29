@@ -1,0 +1,20 @@
+{
+  "name": "tap-room",
+  "description": "a speghetti bar",
+  "main": "",
+  "authors": [
+    "Larry and Derek"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
