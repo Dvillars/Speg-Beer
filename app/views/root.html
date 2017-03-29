@@ -1,19 +1,8 @@
-<div class="row">
-  <div class="col-xs-6">
-    <div *ngFor="let keg of kegs">
-      <div [class]="checkStatus(keg.pints)" (click)="selectKeg(keg)">
-        <h2 [class]="checkSelected(keg)">Name: {{keg.name}}</h2>
-        <h3>Brand: {{keg.brand}}</h3>
-        <h3>Price: {{keg.price}}</h3>
-        <h3 [class]="checkSpegContent(keg.spegContent)">Speghet: {{keg.spegContent}}%</h3>
-        <h3>Pints: {{keg.pints}}</h3>
-      </div>
-    </div>
+<div class="container">
+  <div class="title-box">
+    <h1>Tap Room</h1>
   </div>
-    <div class="col-xs-6">
-      <div *ngIf='selectedKeg'>
-        <kegUpdate [keg]="selectedKeg">Loading...</kegUpdate>
-        <button class="btn btn-warning" (click)="done(keg)">Done</button>
-      </div>
-    </div>
+  <div class="row">
+    <speg-beer>Loading...</speg-beer>
+  </div>
 </div>
