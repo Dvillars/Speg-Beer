@@ -1,22 +1,24 @@
-<button class="btn btn-warning"(click)="showNewForm = !showNewForm">New Speg</button>
-<div class="new-speg" *ngIf='showNewForm'>
-  <form>
-    <div class="form-group">
-      <label for="name">Name: </label>
-      <input type="text" #newName>
-    </div>
-    <div class="form-group">
-      <label for="brand">Brand: </label>
-      <input type="text" #newBrand>
-    </div>
-    <div class="form-group">
-      <label for="price">Price: </label>
-      <input type="text" #newPrice>
-    </div>
-    <div class="form-group">
-      <label for="speghet">Speghetti Content: </label>
-      <input type="text" #newSpegContent>
-    </div>
-    <button class="btn btn-warning" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newSpegContent.value)" (click)="showNewForm = !showNewForm">Add New Spegbeer</button>
-  </form>
+<div class="new-speg">
+  <button class="btn btn-warning"(click)="showNewForm = !showNewForm">New Speg</button>
+  <div *ngIf='showNewForm'>
+    <form>
+      <div class="form-group">
+        <label for="name">Name: </label>
+        <input type="text" #newName>
+      </div>
+      <div class="form-group">
+        <label for="brand">Brand: </label>
+        <input type="text" #newBrand>
+      </div>
+      <div class="form-group">
+        <label for="price">Price: </label>
+        <input type="text" #newPrice>
+      </div>
+      <div class="form-group">
+        <label for="speghet">Speghetti Content: </label>
+        <input type="text" #newSpegContent>
+      </div>
+      <button class="btn btn-warning" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newSpegContent.value); showNewForm = !showNewForm">Add New Spegbeer</button>
+    </form>
+  </div>
 </div>
