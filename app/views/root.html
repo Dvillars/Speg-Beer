@@ -13,6 +13,7 @@
     <div class="col-xs-6">
       <div *ngIf='selectedKeg'>
         <kegUpdate [keg]="selectedKeg">Loading...</kegUpdate>
+        <button class="btn btn-warning" (click)="done(keg)">Done</button>
       </div>
     </div>
 </div>

@@ -38,6 +38,11 @@ export class AppComponent{
     }
   }
 
+  done() {
+    this.selectedKeg.currentSelect = false;
+    this.selectedKeg = null;
+  }
+
   checkSpegContent(content) {
     if(content > 14) {
       return 'high-speg';
