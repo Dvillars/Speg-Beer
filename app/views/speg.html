@@ -11,7 +11,7 @@
 </div>
 <div class="edit-speg-div">
   <div *ngIf='selectedKeg'>
-    <kegUpdate [keg]="selectedKeg" (clickSender)="done($event)">Loading...</kegUpdate>
+    <kegUpdate [keg]="selectedKeg" (clickSender)="done($event);" (otherClickSender)="addSale($event)">Loading...</kegUpdate>
     <button class="btn btn-warning" (click)="done(selectedKeg)">Done</button>
   </div>
 </div>

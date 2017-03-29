@@ -10,6 +10,11 @@ import { KEGS } from './models/mock-kegs';
 
 export class AppComponent{
   masterKegList: Keg[] = KEGS;
+  sales: number = 0;
+
+  addSale(price) {
+    this.sales += price;
+  }
 
   done(kegToDeselect) {
     kegToDeselect.currentSelect = false;

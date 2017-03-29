@@ -1,9 +1,10 @@
 <div class="container">
   <div class="title-box">
     <h1>Tap Room</h1>
+    <h2>Sales for the day: ${{sales}} </h2>
   </div>
   <div class="row">
     <new-speg (sendNewObject)="addKeg($event)">Loading...</new-speg>
-    <speg-beer [kegs]="masterKegList" (clickSender)="done($event)">Loading...</speg-beer>
+    <speg-beer [kegs]="masterKegList" (clickSender)="done($event);" (otherClickSender)="addSale($event)">Loading...</speg-beer>
   </div>
 </div>

@@ -1,5 +1,4 @@
 <div class="new-speg">
-  <button class="btn btn-warning"(click)="showNewForm = !showNewForm">New Speg</button>
   <div *ngIf='showNewForm'>
     <form>
       <div class="form-group">
@@ -21,4 +20,5 @@
       <button class="btn btn-warning" (click)="submitForm(newName.value, newBrand.value, newPrice.value, newSpegContent.value); showNewForm = !showNewForm">Add New Spegbeer</button>
     </form>
   </div>
+  <button class="btn btn-warning"(click)="showNewForm = !showNewForm">New Speg</button>
 </div>
