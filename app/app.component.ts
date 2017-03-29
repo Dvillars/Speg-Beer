@@ -5,23 +5,7 @@ import { UpdateComponent } from './kegupdate.component';
 
 @Component({
   selector: 'app-root',
-  template: `<h1>Yo fam, wat up?</h1>
-  <div *ngFor="let keg of kegs">
-    <div [class]="checkStatus(keg.pints)">
-      <h2>Name: {{keg.name}}</h2>
-      <h3>Brand: {{keg.brand}}</h3>
-      <h3>Price: {{keg.price}}</h3>
-      <h3>Speghet%: {{keg.spegContent}}</h3>
-      <h3>Pints: {{keg.pints}}</h3>
-      <kegUpdate [keg]="keg">Loading...</kegUpdate>
-    </div>
-  </div>
-
-
-
-
-
-  `
+  templateUrl: '../app/views/root.html'
 })
 
 export class AppComponent{
@@ -36,7 +20,13 @@ export class AppComponent{
     }
   }
 
-  // newKeg(name, brand, price, spegContent, kegs) {
-  //   kegs.push(new Keg(name, brand, price, spegContent));
-  // }
+  checkSpegContent(content) {
+    if(content > 14) {
+      return 'high-speg';
+    }
+    else {
+      return 'normal-speg';
+    }
+  }
+
 }

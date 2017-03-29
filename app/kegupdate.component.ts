@@ -9,7 +9,7 @@ import { Keg } from './objects/keg';
   <div *ngIf="updateForm">
     <input [(ngModel)]='keg.name' type='text' placeholder='Brand:'>
     <input [(ngModel)]='keg.price' type='text' placeholder='Price:'>
-    <input [(ngModel)]='keg.spegContent' type='text' placeholder='Speghet:'>
+    <input [(ngModel)]='keg.spegContent' type='number' placeholder='Speghet:'>
   </div>
   `
 })
