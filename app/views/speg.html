@@ -1,4 +1,4 @@
-<div class="col-xs-8">
+<div class="col-xs-6">
   <div class="all-kegs" *ngFor="let keg of kegs | servable">
     <div [class]="checkStatus(keg)" (click)="selectKeg(keg)">
       <h2>{{keg.name}} | ${{keg.price}}</h2>
