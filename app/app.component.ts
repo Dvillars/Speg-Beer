@@ -20,11 +20,13 @@ export class AppComponent{
       tempScale = (100 - userScale) / 100;
       this.masterKegList.forEach(function(keg){
         keg.price = keg.price * tempScale;
+        keg.price = Number((keg.price).toFixed(2));
       })
       this.scale = tempScale;
     } else {
       this.masterKegList.forEach(function(keg){
         keg.price = keg.price / tempScale;
+        keg.price = Number((keg.price).toFixed(2));
       });
     }
     this.happyHour = !this.happyHour;
