@@ -8,15 +8,15 @@ import { Keg } from './objects/keg';
 
 export class UpdateComponent{
   @Input() keg: Keg;
-  @Output() clickSender = new EventEmitter();
-  @Output() otherClickSender = new EventEmitter();
+  @Output() doneClick = new EventEmitter();
+  @Output() addSaleClick = new EventEmitter();
 
   done(keg: Keg) {
-    this.clickSender.emit(keg);
+    this.doneClick.emit(keg);
   }
 
   addSale(price: number) {
-    this.otherClickSender.emit(price);
+    this.addSaleClick.emit(price);
   }
 
   servePint(keg: Keg) {

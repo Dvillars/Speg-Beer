@@ -11,6 +11,22 @@ import { KEGS } from './models/mock-kegs';
 export class AppComponent{
   masterKegList: Keg[] = KEGS;
   sales: number = 0;
+  happyHour: boolean = false;
+
+
+  happyHourToggle() {
+    if(this.happyHour) {
+      this.masterKegList.forEach(function(keg){
+        keg.price = keg.price * 2;
+      })
+      this.happyHour = !this.happyHour;
+    } else {
+      this.masterKegList.forEach(function(keg){
+        keg.price = keg.price / 2;
+      });
+      this.happyHour = !this.happyHour;
+    }
+  }
 
   addSale(price) {
     this.sales += price;

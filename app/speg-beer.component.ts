@@ -11,18 +11,18 @@ import { UpdateComponent } from './keg-update.component';
 
 export class SpegComponent {
 @Input() kegs: Keg[];
-@Output() clickSender = new EventEmitter();
-@Output() otherClickSender = new EventEmitter();
+@Output() doneClick = new EventEmitter();
+@Output() addSaleClick = new EventEmitter();
 
 selectedKeg = null;
 
 done(kegToDeselect: Keg) {
   this.selectedKeg = null;
-  this.clickSender.emit(kegToDeselect);
+  this.doneClick.emit(kegToDeselect);
 }
 
 addSale(price: number) {
-  this.otherClickSender.emit(price);
+  this.addSaleClick.emit(price);
 }
 
 selectKeg(keg: Keg) {

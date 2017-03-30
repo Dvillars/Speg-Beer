@@ -29,8 +29,11 @@ $low-content: #bc84b0;
 .edit-speg-div {
   text-align: right;
   position: fixed;
-  right: 0px;
-  top: 15%;
+  right: 5%;
+  top: 20%;
+  button {
+    margin-top: 1%;
+  }
 }
 
 .new-speg {
