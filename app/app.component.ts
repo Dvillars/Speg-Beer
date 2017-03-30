@@ -19,14 +19,12 @@ export class AppComponent{
     if(!this.happyHour) {
       tempScale = (100 - userScale) / 100;
       this.masterKegList.forEach(function(keg){
-        keg.price = keg.price * tempScale;
-        keg.price = Number((keg.price).toFixed(2));
+        keg.price = Number((keg.price * tempScale).toFixed(2));
       })
       this.scale = tempScale;
     } else {
       this.masterKegList.forEach(function(keg){
-        keg.price = keg.price / tempScale;
-        keg.price = Number((keg.price).toFixed(2));
+        keg.price = Number((keg.price / tempScale).toFixed(2));
       });
     }
     this.happyHour = !this.happyHour;
@@ -34,6 +32,7 @@ export class AppComponent{
 
   addSale(price) {
     this.sales += price;
+    this.sales = Number((this.sales).toFixed(2));
   }
 
   done(kegToDeselect) {
