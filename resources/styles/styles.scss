@@ -1,32 +1,47 @@
-$main: #8eb9ff;
-$high-speg: #f99dc0;
-$low-speg: #241a44;
-$selected: #2591f7;
-$nav-bar-background: #cecece;
-$low-content: #bc84b0;
+@import url('https://fonts.googleapis.com/css?family=Pangolin|Patrick+Hand+SC');
 
+$main: #F6EAB0;
+$high-speg: #47056A;
+$normal-speg: #FAA2BA;
+$selected: #7A0505;
+$nav-bar-background: #F9F9F9;
+$low-content: #EAEAEA;
+$background: #C9775E;
+$button-background: #890F0F;
+$font: #7A0505;
 
-.body {
-  margin: 10% 0 10% 0;
+body {
+  font-family: 'Patrick Hand SC', cursive;
+  background: linear-gradient(90deg, $background, $main);
+  color: $font;
 }
+.body {
+  margin: 13% 0 10% 0;
+}
+.btn-warning {
+  background-color: $button-background;
+  color: white;
+}
+
 .title-box {
-  opacity: 0.8;
+  opacity: 0.9;
   text-align: right;
   position: fixed;
   padding: 0 5% 1% 0;
   top: 0px;
   width: 100%;
-  background-color: $nav-bar-background;
-  border-bottom: 1px solid black;
+  background: linear-gradient(90deg, $nav-bar-background, white);
+  border-bottom: 1px solid #7A0505;
   h1 {
-    font-size: 25px;
+    font-size: 30px;
+    font-family: 'Pangolin', cursive;
   }
   h2 {
     font-size: 20px;
   }
   input {
     max-width: 20%;
-    float: right;   
+    float: right;
   }
 }
 
@@ -50,24 +65,30 @@ $low-content: #bc84b0;
 .all-kegs {
   margin: 3% 0 0 3%;
   div {
-    border-radius: 10px;
+    border-radius: 1px;
     padding: 2% 2% 2% 5%;
     background-color: $main;
+    opacity: 0.9;
   }
-  .selected {
-    position: relative;
-    left: 5%;
+  div:hover {
+    opacity: 1;
   }
 
   .high-speg {
-    border: 5px solid $high-speg;
+    border: 2px solid $high-speg;
   }
 
   .normal-speg {
-    border: 5px solid $low-speg;
+    border: 2px solid $normal-speg;
   }
 
   .low-content {
     background-color: $low-content;
+  }
+  .selected {
+    opacity: 1;
+    position: relative;
+    left: 5%;
+    border-left: 10px solid $selected;
   }
 }

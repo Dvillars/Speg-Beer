@@ -51,7 +51,7 @@ export class UpdateComponent{
     if(keg.pints === 0) {
       alert("You cannot sell pints you are out of!");
     } else if(keg.pints < 4){
-      alert("You do no have enough for a small growler");
+      alert("You do no have enough for a large growler");
     } else {
       this.addSale(keg.price * 4);
       keg.pints-= 4;

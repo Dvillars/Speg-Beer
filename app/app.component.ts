@@ -15,19 +15,23 @@ export class AppComponent{
   scale: number = 0;
 
   happyHourToggle(userScale: number) {
-    var tempScale: number = this.scale;
-    if(!this.happyHour) {
-      tempScale = (100 - userScale) / 100;
-      this.masterKegList.forEach(function(keg){
-        keg.price = Number((keg.price * tempScale).toFixed(2));
-      })
-      this.scale = tempScale;
+    if(!userScale) {
+      alert("Please enter a discount %")
     } else {
-      this.masterKegList.forEach(function(keg){
-        keg.price = Number((keg.price / tempScale).toFixed(2));
-      });
+      var tempScale: number = this.scale;
+      if(!this.happyHour) {
+        tempScale = (100 - userScale) / 100;
+        this.masterKegList.forEach(function(keg){
+          keg.price = Number((keg.price * tempScale).toFixed(2));
+        })
+        this.scale = tempScale;
+      } else {
+        this.masterKegList.forEach(function(keg){
+          keg.price = Number((keg.price / tempScale).toFixed(2));
+        });
+      }
+      this.happyHour = !this.happyHour;
     }
-    this.happyHour = !this.happyHour;
   }
 
   addSale(price) {
