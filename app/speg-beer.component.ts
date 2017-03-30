@@ -14,7 +14,12 @@ export class SpegComponent {
 @Output() doneClick = new EventEmitter();
 @Output() addSaleClick = new EventEmitter();
 
+filterByServableness: string = "servableKegs";
 selectedKeg = null;
+
+onChange(optionFromMenu) {
+  this.filterByServableness = optionFromMenu;
+}
 
 done(kegToDeselect: Keg) {
   this.selectedKeg = null;

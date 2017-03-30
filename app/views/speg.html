@@ -1,5 +1,5 @@
 <div class="col-xs-6">
-  <div class="all-kegs" *ngFor="let keg of kegs | servable">
+  <div class="all-kegs" *ngFor="let keg of kegs | servable:filterByServableness">
     <div [class]="checkStatus(keg)" (click)="selectKeg(keg)">
       <h2>{{keg.name}} | ${{keg.price}}</h2>
       <h3>{{keg.brand}}</h3>
@@ -9,6 +9,11 @@
   </div>
 </div>
 <div class="edit-speg-div">
+  <select class="form-control" (change)="onChange($event.target.value)">
+    <option value="allKegs">All Kegs</option>
+    <option value="emptyKegs">Empty Kegs</option>
+    <option value="servableKegs">Servable Kegs</option>
+  </select>
   <div *ngIf='selectedKeg'>
     <kegUpdate [keg]="selectedKeg" (doneClick)="done($event);" (addSaleClick)="addSale($event)">Loading...</kegUpdate>
     <button class="btn btn-warning" (click)="done(selectedKeg)">Done</button>

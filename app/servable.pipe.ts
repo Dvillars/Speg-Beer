@@ -7,14 +7,26 @@ import { Keg } from './objects/keg';
 })
 
 export class ServablePipe implements PipeTransform {
-  transform(input: Keg[], args) {
-    var output: Keg[] = [];
-    for(var i = 0; i < input.length; i++){
-      if(input[i].pints >= 1) {
 
-        output.push(input[i]);
+
+  transform(input: Keg[], desiredServableness) {
+    var output: Keg[] = [];
+    if(desiredServableness === "servableKegs"){
+      for(var i = 0; i < input.length; i++){
+        if(input[i].pints >= 1) {
+          output.push(input[i]);
+        }
       }
+      return output;
+    } else if(desiredServableness === "emptyKegs") {
+      for(var i = 0; i < input.length; i++){
+        if(input[i].pints === 0) {
+          output.push(input[i]);
+        }
+      }
+      return output;
+    } else {
+      return input;
     }
-    return output;
   }
 }
