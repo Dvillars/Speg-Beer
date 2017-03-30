@@ -9,5 +9,6 @@
 <div class="title-box">
   <h1>Tap Room</h1>
   <h2>Sales for the day: ${{sales}} </h2>
-  <button class="btn btn-warning" (click)="happyHourToggle()">Happy Hour!</button>
+  <input class="form-control" type="number" #scale placeholder="Discount %" required>
+  <button class="btn btn-warning" (click)="happyHourToggle(scale.value)">Happy Hour!</button>
 </div>

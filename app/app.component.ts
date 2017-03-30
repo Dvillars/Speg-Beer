@@ -12,20 +12,22 @@ export class AppComponent{
   masterKegList: Keg[] = KEGS;
   sales: number = 0;
   happyHour: boolean = false;
+  scale: number = 0;
 
-
-  happyHourToggle() {
-    if(this.happyHour) {
+  happyHourToggle(userScale: number) {
+    var tempScale: number = this.scale;
+    if(!this.happyHour) {
+      tempScale = (100 - userScale) / 100;
       this.masterKegList.forEach(function(keg){
-        keg.price = keg.price * 2;
+        keg.price = keg.price * tempScale;
       })
-      this.happyHour = !this.happyHour;
+      this.scale = tempScale;
     } else {
       this.masterKegList.forEach(function(keg){
-        keg.price = keg.price / 2;
+        keg.price = keg.price / tempScale;
       });
-      this.happyHour = !this.happyHour;
     }
+    this.happyHour = !this.happyHour;
   }
 
   addSale(price) {

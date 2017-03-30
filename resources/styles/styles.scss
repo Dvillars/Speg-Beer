@@ -24,6 +24,10 @@ $low-content: #bc84b0;
   h2 {
     font-size: 20px;
   }
+  input {
+    max-width: 20%;
+    float: right;   
+  }
 }
 
 .edit-speg-div {
